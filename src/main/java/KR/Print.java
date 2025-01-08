@@ -18,7 +18,7 @@ public class Print implements Runnable{
                         Thread.sleep(300);
                         lock.wait();
                     } catch (InterruptedException e) {
-                        System.out.println("Получилась хуйня!!!");;
+                        throw new RuntimeException(e);
                     }
                 }
                 System.out.print(numToPrint + ", ");
